@@ -7,7 +7,7 @@ This is a TA to pull in data from Jira REST API.
 The [auditing](https://developer.atlassian.com/cloud/jira/platform/rest/v3/#api-group-Audit-records) endpoint is being hit to fetch data for the audit records. 
 
 ### Getting Jira API Token
-- Get the proper permission: `Jira Administrators global permission`
+- Get the proper permission: `Jira Administrators` global permission.
 Please follow the instruction [here](https://confluence.atlassian.com/adminjiracloud/managing-global-permissions-776636359.html) to setup the proper permission.
 - Get your API token
 Please follow the instruction [here](https://confluence.atlassian.com/cloud/api-tokens-938839638.html) to create an API token. Copy it to clipboard, then paste the token to elsewhere to save.
@@ -44,6 +44,9 @@ The configuration steps are common for `on-prem` and `cloud`. Please follow the 
 
 
 > Built by Splunk's FDSE Team (#team-fdse).
+
+## Reference 
+- This Add-on was built via [Splunk Add-On Builder](https://docs.splunk.com/Documentation/AddonBuilder/3.0.1/UserGuide/Thirdpartysoftwarecredits).
 
 ## Credits & Acknowledgements
 * Yuan Ling
