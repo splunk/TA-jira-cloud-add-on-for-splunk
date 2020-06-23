@@ -47,15 +47,7 @@ class ModInputjira_audit_log(modinput_wrapper.base_modinput.BaseModInput):
         For other input types, arguments should be get from input_module. Defining new input types could be easier.
         """
         scheme.add_argument(smi.Argument("base_url", title="Base URL",
-                                         description="",
-                                         required_on_create=True,
-                                         required_on_edit=False))
-        scheme.add_argument(smi.Argument("username", title="username",
-                                         description="",
-                                         required_on_create=True,
-                                         required_on_edit=False))
-        scheme.add_argument(smi.Argument("api_token", title="API Token",
-                                         description="",
+                                         description="Base URL. Must start with \"https://\", Example: https://your-domain.atlassian.net",
                                          required_on_create=True,
                                          required_on_edit=False))
         scheme.add_argument(smi.Argument("from", title="Start Time",

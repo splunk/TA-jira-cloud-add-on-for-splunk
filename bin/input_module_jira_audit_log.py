@@ -48,7 +48,7 @@ def collect_events(helper, ew):
     """
     opt_base_url = helper.get_arg('base_url')
     opt_username = helper.get_arg('username')
-    opt_api_token = helper.get_arg('api_token')
+    opt_api_token = helper.get_global_setting('api_token')
     opt_from = helper.get_arg('from')
 
     # create checkpoint key
@@ -112,7 +112,7 @@ def get_audit_logs(user, token, base_url, start, offset, limit, ew, helper, key)
                     event_time = event['created'][:-9]
                     event_epoch_time = (datetime.strptime(
                         event_time, '%Y-%m-%dT%H:%M:%S') - datetime(1970, 1, 1)).total_seconds()
-                    event_time = event['created'][:-9]
+
                     helper.log_debug(
                         "Event Create Time: {} -- Epoch Time: {}".format(event_time, event_epoch_time))
 

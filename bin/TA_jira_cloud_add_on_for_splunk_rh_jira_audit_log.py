@@ -53,16 +53,6 @@ fields = [
         )
     ),
     field.RestField(
-        'api_token',
-        required=True,
-        encrypted=True,
-        default=None,
-        validator=validator.String(
-            min_len=0,
-            max_len=8192,
-        )
-    ),
-    field.RestField(
         'from',
         required=True,
         encrypted=False,

@@ -25,7 +25,13 @@ Create a support ticket with `APP-CERT` reference to get it installed on the Clo
 The configuration steps are common for `on-prem` and `cloud`. Please follow the following steps in order:
 1. Open the Web UI for the Heavy Forwarder (or IDM).
 2. Access the TA from the list of applications.
-3. Create an input.
+3. Configure the API Token 
+- Click on `Configuration` button on the top left corner.
+- Click on `Add-on Settings` button.
+- Enter the `API Token`.
+    - **API Token** (_required_): Jira API Token.
+- Click on the `Save` green button.
+4. Create an input.
 - Click on `Inputs` button on the top left corner.
 - Click on `Create New Input` button on the top right corner.
 - Enter the following details in the pop up box:
@@ -33,8 +39,7 @@ The configuration steps are common for `on-prem` and `cloud`. Please follow the 
     - **Interval** (_required_): Time interval of input in seconds. 
     - **Index** (_required_): Index for storing data.
     - **Base URL** (_required_): The Base URL. Must start with "https". For example, `https://your-domain.atlassian.net`
-    - **username** (_required_): Jira account Email Address.
-    - **API Token** (_required_): Jira API Token.
+    - **username** (_required_): Jira account Email Address.  
     - **Start Time** (_required_): The date and time on or after which returned audit records must have been created. Format: YYYY-MM-DDThh:mm:ss
 - Click on the `Add` green button on the bottom right of the pop up box.
 

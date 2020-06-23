@@ -11,39 +11,59 @@
             "title": "Configuration",
             "description": "Set up your add-on",
             "tabs": [{
-                "name": "logging",
-                "title": "Logging",
-                "entity": [{
-                    "field": "loglevel",
-                    "label": "Log level",
-                    "type": "singleSelect",
-                    "options": {
-                        "disableSearch": true,
-                        "autoCompleteFields": [{
-                                "label": "DEBUG",
-                                "value": "DEBUG"
-                            },
-                            {
-                                "label": "INFO",
-                                "value": "INFO"
-                            },
-                            {
-                                "label": "WARNING",
-                                "value": "WARNING"
-                            },
-                            {
-                                "label": "ERROR",
-                                "value": "ERROR"
-                            },
-                            {
-                                "label": "CRITICAL",
-                                "value": "CRITICAL"
-                            }
-                        ]
-                    },
-                    "defaultValue": "INFO"
-                }]
-            }]
+                    "name": "logging",
+                    "title": "Logging",
+                    "entity": [{
+                        "field": "loglevel",
+                        "label": "Log level",
+                        "type": "singleSelect",
+                        "options": {
+                            "disableSearch": true,
+                            "autoCompleteFields": [{
+                                    "label": "DEBUG",
+                                    "value": "DEBUG"
+                                },
+                                {
+                                    "label": "INFO",
+                                    "value": "INFO"
+                                },
+                                {
+                                    "label": "WARNING",
+                                    "value": "WARNING"
+                                },
+                                {
+                                    "label": "ERROR",
+                                    "value": "ERROR"
+                                },
+                                {
+                                    "label": "CRITICAL",
+                                    "value": "CRITICAL"
+                                }
+                            ]
+                        },
+                        "defaultValue": "INFO"
+                    }]
+                },
+                {
+                    "name": "additional_parameters",
+                    "title": "Add-on Settings",
+                    "entity": [{
+                        "field": "api_token",
+                        "label": "API Token",
+                        "type": "text",
+                        "help": "Jira API Token",
+                        "required": true,
+                        "defaultValue": "",
+                        "encrypted": true,
+                        "validators": [{
+                            "type": "string",
+                            "minLength": 0,
+                            "maxLength": 8192,
+                            "errorMsg": "Max length of password is 8192"
+                        }]
+                    }]
+                }
+            ]
         },
         "inputs": {
             "title": "Inputs",
@@ -89,10 +109,6 @@
                     {
                         "field": "username",
                         "label": "username"
-                    },
-                    {
-                        "field": "api_token",
-                        "label": "API Token"
                     },
                     {
                         "field": "from",
@@ -191,23 +207,9 @@
                         }
                     },
                     {
-                        "field": "api_token",
-                        "label": "API Token",
-                        "help": "Jira API Token",
-                        "required": true,
-                        "type": "text",
-                        "encrypted": true,
-                        "validators": [{
-                            "type": "string",
-                            "minLength": 0,
-                            "maxLength": 8192,
-                            "errorMsg": "Max length of password is 8192"
-                        }]
-                    },
-                    {
                         "field": "from",
                         "label": "Start Time",
-                        "help": "The date and time on or after which returned audit records must have been created.Format: YYYY-MM-DDThh:mm:ss",
+                        "help": "The date and time on or after which returned audit records must have been created.Format: YYYY-MM-DDThh:mm:ss. Note: Please use UTC time",
                         "required": true,
                         "type": "text",
                         "validators": [{
