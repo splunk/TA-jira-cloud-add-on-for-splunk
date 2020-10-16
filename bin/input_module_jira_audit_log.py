@@ -73,8 +73,12 @@ def collect_events(helper, ew):
 
     offset = 0
     opt_limit = 1000
-    records = get_audit_logs(opt_username, opt_api_token, opt_base_url,
-                             start_time, offset, opt_limit, ew, helper, key)
+    records = opt_limit
+    while(records == opt_limit):       
+        records = get_audit_logs(opt_username, opt_api_token, opt_base_url,
+                                start_time, offset, opt_limit, ew, helper, key)
+        if records:
+            offset = offset + records
 
 
 def build_url(base_url, start, offset, limit):
