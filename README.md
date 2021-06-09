@@ -4,7 +4,7 @@
 
 ## Getting Started
 This is a TA to pull in data from Jira REST API. 
-The [auditing](https://developer.atlassian.com/cloud/jira/platform/rest/v3/#api-group-Audit-records) endpoint is being hit to fetch data for the audit records. 
+The [Audit records](https://developer.atlassian.com/cloud/jira/platform/rest/v3/#api-group-Audit-records) endpoint is being hit to fetch data for the audit records. 
 
 ### Getting Jira API Token
 - Get the proper permission: `Jira Administrators` global permission.
