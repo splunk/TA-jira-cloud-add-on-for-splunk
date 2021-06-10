@@ -1,6 +1,6 @@
-# JIRA Cloud Add-On for Splunk
+# JIRA Cloud Audit Logs Add-On for Splunk
 
-> The **JIRA Cloud Add-On for Splunk** uses the _Jira REST API_ to fetch audit records from Jira and ingest them into Splunk.
+> The **JIRA Cloud Audit Logs Add-On for Splunk** uses the _Jira REST API_ to fetch audit records from Jira and ingest them into Splunk.
 
 ## Getting Started
 This is a TA to pull in data from Jira REST API. 

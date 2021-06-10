@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "info": {
-    "title": "JIRA Cloud Add-On for Splunk",
+    "title": "JIRA Cloud Audit Logs Add-On for Splunk",
     "id": {
       "group": null,
       "name": "TA-jira-cloud-add-on-for-splunk",
