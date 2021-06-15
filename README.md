@@ -3,7 +3,7 @@
 > The **JIRA Cloud Audit Logs Add-On for Splunk** uses the _Jira REST API_ to fetch audit records from Jira and ingest them into Splunk.
 
 ## Getting Started
-This is a TA to pull in data from Jira REST API. 
+This is a Add-on to pull in data from Jira REST API. 
 The [Audit records](https://developer.atlassian.com/cloud/jira/platform/rest/v3/#api-group-Audit-records) endpoint is being hit to fetch data for the audit records. 
 
 ### Getting Jira API Token
@@ -12,17 +12,21 @@ Please follow the instruction [here](https://confluence.atlassian.com/adminjirac
 - Get your API token
 Please follow the instruction [here](https://confluence.atlassian.com/cloud/api-tokens-938839638.html) to create an API token. Copy it to clipboard, then paste the token to elsewhere to save.
 
-#### Installation and Configuration Steps
-This application can be installed on-prem and cloud. 
+### Installation Instructions
+This Add-on can be installed in **Splunk Enterprise** and **Splunk Cloud**. 
 
-##### Installation Steps for `on-prem`
-Install the TA on one of the Heavy Forwarder(s).
+#### Installation Steps for `Splunk Enterprise`
+- Please follow the steps [here](https://docs.splunk.com/Documentation/AddOns/released/Overview/Singleserverinstall) to install the Add-on in a single-instance Splunk Enterprise deployment.
 
-##### Installation Steps for `cloud`
-Create a support ticket with `APP-CERT` reference to get it installed on the Cloud instance *OR* follow the cloud-ops steps to install non-published applications.
+- Please follow the steps [here](https://docs.splunk.com/Documentation/AddOns/released/Overview/Distributedinstall) to install the Add-on in a distributed Splunk Enterprise deployment.
 
-#### Configuration steps
-The configuration steps are common for `on-prem` and `cloud`. Please follow the following steps in order:
+
+#### Installation Steps for `Splunk Cloud`
+Please follow the steps [here](https://docs.splunk.com/Documentation/AddOns/released/Overview/SplunkCloudinstall) to install the Add-on in Splunk Cloud.
+
+
+### Configuration Instructions
+The configuration steps are common for `Splunk Enterprise` and `Splunk Cloud`. Please follow the following steps in order:
 1. Open the Web UI for the Heavy Forwarder (or IDM).
 2. Access the TA from the list of applications.
 3. Configure the API Token 
@@ -45,7 +49,7 @@ The configuration steps are common for `on-prem` and `cloud`. Please follow the 
 
 ## Versions Supported
 
-  - Tested for installation and basic ingestion on Splunk 8.0.1, 8.0.0, 7.3, 7.2, and 7.1 based on Jira test account.
+  - Tested for installation and basic ingestion on Splunk 8.2, 8.1, 8.0, and 7.3 based on Jira test account.
 
 
 > Built by Splunk's FDSE Team (#team-fdse).
