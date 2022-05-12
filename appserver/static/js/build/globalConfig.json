@@ -2,7 +2,7 @@
     "meta": {
         "name": "TA-jira-cloud-add-on-for-splunk",
         "displayName": "JIRA Cloud Audit Logs Add-On for Splunk",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "apiVersion": "3.0.0",
         "restRoot": "TA_jira_cloud_add_on_for_splunk"
     },
